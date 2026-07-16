@@ -1,0 +1,288 @@
+/* == 공통, 제목 스타일 (전체 페이지) == */
+
+* {
+    font-family: "Kirang Haerang", system-ui;
+    letter-spacing: 0.1em;
+}
+
+body {
+    line-height: 1.6;
+    color: #333333;
+    background-color: #fffffffe;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+a {
+    color: #78A4CB;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #95BDD7;
+    text-decoration: underline;
+}
+
+h1 {
+    color: black;
+    border-bottom: 2px solid #78A4CB;
+    padding: 10px;
+}
+
+h2 {
+    color: black;
+    background-color: #d9f5fb;
+    border-left: 5px solid #95BDD7;
+    padding-left: 10px;
+}
+
+h3 {
+    background-color: #fffae8;
+}
+
+
+/* == signUp.html 회원가입 페이지 == */
+
+form {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+fieldset {
+    background-color: #f5f5f5;
+    border: 1px solid #CBCBCB;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: #333333;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+input[type="text"], input[type="password"], input[type="date"], select, textarea {
+    width: 95%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #828282;
+    border-radius: 5px;
+    background: white;
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+}
+
+/* 버튼 */
+
+input[type="submit"], input[type="reset"] {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color .3s,
+                color .3s,
+                transform .3s;
+}
+
+input[type="submit"] {
+    background-color: #7299c0;
+    color: white;
+}
+
+input[type="reset"] {
+    background-color: #95a5a6;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #88BDF2;
+    transform: scale(1.05);
+}
+
+input[type="reset"]:hover {
+    background-color: #7f8c8d;
+    transform: scale(1.05);
+}
+
+
+/* == myClass.html 시간표 페이지 == */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background: white;
+}
+
+th,
+td {
+    padding: 12px;
+}
+
+td:hover {
+    background-color: #FFFFE3;
+}
+
+
+/* == myTrip.html 여행 앨범 == */
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.trip-card {
+    background: white;
+    border: 1px solid #bbbbbb;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    transition: transform .3s,
+                box-shadow .3s;
+}
+
+.trip-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.trip-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+
+/* == index.html 메인 페이지 == */
+
+/* 바로가기 메뉴 */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    padding: 12px;
+    color: #333;
+    border-radius: 8px;
+    transition: background-color .5s,
+                color .5s;
+}
+
+nav a:hover {
+    background-color: #b0dcec;
+    color: white;
+}
+
+/* 본문 레이아웃 */
+
+.content {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+main {
+    flex: 3;
+}
+
+aside {
+    flex: 1;
+}
+
+/* 게임 버튼 */
+
+aside button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    font-family: inherit;
+    font-size: 18px;
+    background-color: #ebebeb;
+    color: #4a4a4a;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+aside button:hover {
+    background-color: #bae5f4;
+}
+
+/* 실시간 날씨 */
+
+#weather-box {
+    background-color: #e9f9ff;
+    padding: 10px;
+}
+
+
+/* == 애니메이션 == */
+
+header {
+    animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* == 반응형 웹 == */
+
+@media (max-width:786px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    main, aside {
+        width: 100%;
+    }
+
+    .trip-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trip-card img, figure img, video {
+        width: 100%;
+        height: auto;
+    }
+}

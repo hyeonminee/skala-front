@@ -2,28 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 반응형 웹을 위한 viewport 메타 태그 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>나의 여행지</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>🌏 나의 여행 앨범 🎵</h1>
-    <audio controls autoplay>
-        <source src="../media/여행을 떠나요.mp3" type="audio/mpeg">
-        브라우저가 오디오를 지원하지 않습니다.
-    </audio>
-    <hr>
-    <img src="../media/캐나다.jpeg" width="300" alt="캐나다">
-    <h4>캐나다 (2025년)</h4>
-    <img src="../media/프랑스.jpeg" width="300" alt="프랑스">
-    <h4>프랑스 (2026년)</h4>
-    <img src="../media/바르셀로나.jpeg" width="300" alt="바르셀로나">
-    <h4>바르셀로나 (2026년)</h4>
-    <hr>
-    <h1>📹 나의 여행 영상</h1>
-    <video width="280" height="160" autoplay>
-        <source src="../media/제주.mp4" type="video/mp4">
-        브라우저가 비디오를 지원하지 않습니다.
-    </video>
-    <h4>제주도 바다의 물고기들 🐟</h4>
+    <div class="container">
+        <h1>🌏 나의 여행 앨범 🎵</h1>
+        <audio controls autoplay>
+            <source src="../media/여행을 떠나요.mp3" type="audio/mpeg">
+            브라우저가 오디오를 지원하지 않습니다.
+        </audio>
+        <hr>
+        
+        <hr>
+
+        <div class="trip-grid">
+
+            <div class="trip-card">
+                <img src="../media/캐나다.jpeg" alt="캐나다">
+                <p>캐나다 (2025년)</p>
+            </div>
+
+            <div class="trip-card">
+                <img src="../media/프랑스.jpeg" alt="프랑스">
+                <p>프랑스 (2026년)</p>
+            </div>
+
+            <div class="trip-card">
+                <img src="../media/바르셀로나.jpeg" alt="바르셀로나">
+                <p>바르셀로나 (2026년)</p>
+            </div>
+
+        </div>
+
+        <hr>
+        <h1>📹 나의 여행 영상</h1>
+        <video width="280" height="160" autoplay>
+            <source src="../media/제주.mp4" type="video/mp4">
+            브라우저가 비디오를 지원하지 않습니다.
+        </video>
+        <h4>제주도 바다의 물고기들 🐟</h4>
+    </div>
 </body>
 </html>
