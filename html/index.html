@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="index-page">
     <!-- 헤더 영역 -->
     <header>
         <h1>박현민의 유니버스 🙋‍♀️</h1>
@@ -18,11 +18,11 @@
     <nav>
         <h3>📁 바로가기 메뉴</h3>
         <ul>
-            <li><a href="http://127.0.0.1:5500/html/myProfile.html">소개 (Profile)</a></li>
-            <li><a href="http://127.0.0.1:5500/html/myClass.html">수업 시간표 (Class)</a></li>
-            <li><a href="http://127.0.0.1:5500/html/myHoliday.html">휴일 계획 (Holiday)</a></li>
-            <li><a href="http://127.0.0.1:5500/html/myTrip.html">여행 앨범 (Album)</a></li>
-            <li><a href="http://127.0.0.1:5500/html/signUp.html">👤 회원가입 (Sign Up)</a></li>
+            <li><a href="myProfile.html">소개 (Profile)</a></li>
+            <li><a href="myClass.html">수업 시간표 (Class)</a></li>
+            <li><a href="myHoliday.html">휴일 계획 (Holiday)</a></li>
+            <li><a href="myTrip.html">여행 앨범 (Album)</a></li>
+            <li><a href="signUp.html">👤 회원가입 (Sign Up)</a></li>
         </ul>
     </nav>
     
@@ -43,7 +43,7 @@
             <section>
                 <h3>📸 이달의 베스트 컷</h3>
                 <figure>
-                    <img src="../media/노트북하는 기니.jpeg" width="300" alt="노트북기니">
+                    <img src="../media/notebookwith.jpeg" width="300" alt="노트북기니">
                     <figcaption>제가 좋아하는 기니가 노트북과 함께 있으니 마치 코드를 작성하고 있는 제가 연상되네요. ..</figcaption>
                 </figure>
             </section>
@@ -52,6 +52,8 @@
         
         <!-- 부가 정보 (사이드바) 영역-->
         <aside>
+            <button id="themeBtn" class="btn-submit">🌙 다크모드</button>
+            
             <h2>🌤️ 실시간 정보</h2>
             <p>현재 위치: 광주광역시 광산구 📍</p>
             <p id="clock">⏰ 현재 시간 : 00:00:00</p>
@@ -94,5 +96,6 @@
      <!-- script src="../script/weather.js"></script --> 
      <script type="module" src="../script/realtimeInfo.js"></script>
      <script src="../script/clock.js"></script>
+     <script src="../script/theme.js"></script>
 </body>
 </html>
